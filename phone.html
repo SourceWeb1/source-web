@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SOURCE WEB</title>
+    <link rel="shortcut icon" href="Logo.png">
+    <style>
+        /** BEGIN: Non Openmrs CSS **/
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+	font-family: "Roboto";
+}
+div.container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	margin-top: 40px;
+	border: 1px solid whitesmoke;
+	padding: 21px;
+	border-radius: 4px;
+}
+h4.title {
+	text-align: center;
+	margin-bottom: 45px;
+}
+:root {
+	--omrs-color-ink-lowest-contrast: rgba(47, 60, 85, 0.18);
+	--omrs-color-ink-low-contrast: rgba(60, 60, 67, 0.3);
+	--omrs-color-ink-medium-contrast: rgba(19, 19, 21, 0.6);
+	--omrs-color-interaction: #1e4bd1;
+	--omrs-color-interaction-minus-two: rgba(73, 133, 224, 0.12);
+	--omrs-color-danger: #b50706;
+	--omrs-color-bg-low-contrast: #eff1f2;
+	--omrs-color-ink-high-contrast: #121212;
+	--omrs-color-bg-high-contrast: #ffffff;
+	
+}
+/** END: Non Openmrs CSS **/
+div.omrs-input-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+  width: 20.4375rem;
+}
+
+/* Input*/
+.omrs-input-underlined > input,
+.omrs-input-filled > input {
+	border: none;
+	border-bottom: 0.125rem solid var(--omrs-color-ink-medium-contrast);
+	width: 100%;
+	height: 3rem;
+	font-size: 1.0625rem;
+	padding-left: 0.875rem;
+	line-height: 147.6%;
+	padding-top: 0.825rem;
+	padding-bottom: 0.5rem;
+}
+
+.omrs-input-underlined > input:focus,
+.omrs-input-filled > input:focus {
+	outline: none;
+}
+
+.omrs-input-underlined > .omrs-input-label,
+.omrs-input-filled > .omrs-input-label {
+	position: absolute;
+	top: 0.9375rem;
+	left: 0.875rem;
+	line-height: 147.6%;
+	color: var(--omrs-color-ink-medium-contrast);
+	transition: top .2s;
+}
+
+.omrs-input-underlined > svg,
+.omrs-input-filled > svg {
+	position: absolute;
+	top: 0.9375rem;
+	right: 0.875rem;
+	fill: var(--omrs-color-ink-medium-contrast);
+}
+
+.omrs-input-underlined > .omrs-input-helper,
+.omrs-input-filled > .omrs-input-helper {
+	font-size: 0.9375rem;
+	color: var(--omrs-color-ink-medium-contrast);
+	letter-spacing: 0.0275rem;
+	margin: 0.125rem 0.875rem;
+}
+
+.omrs-input-underlined > input:hover,
+.omrs-input-filled > input:hover {
+	background: var(--omrs-color-interaction-minus-two);
+	border-color: var(--omrs-color-ink-high-contrast);
+}
+
+.omrs-input-underlined > input:focus + .omrs-input-label,
+.omrs-input-underlined > input:valid + .omrs-input-label,
+.omrs-input-filled > input:focus + .omrs-input-label,
+.omrs-input-filled > input:valid + .omrs-input-label {
+	top: 0;
+	font-size: 0.9375rem;
+	margin-bottom: 32px;;
+}
+
+.omrs-input-underlined:not(.omrs-input-danger) > input:focus + .omrs-input-label,
+.omrs-input-filled:not(.omrs-input-danger) > input:focus + .omrs-input-label {
+	color: var(--omrs-color-interaction);
+}
+
+.omrs-input-underlined:not(.omrs-input-danger) > input:focus,
+.omrs-input-filled:not(.omrs-input-danger) > input:focus {
+	border-color: var(--omrs-color-interaction);
+}
+
+.omrs-input-underlined:not(.omrs-input-danger) > input:focus ~ svg,
+.omrs-input-filled:not(.omrs-input-danger) > input:focus ~ svg {
+	fill: var(--omrs-color-ink-high-contrast);
+}
+   
+   * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.buttons {
+    margin: 10%;
+    text-align: center;
+}
+
+.btn-hover {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+.btn-hover.color-2 {
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+ </style>
+</head>
+<body>
+    <div class="container">
+		<div id="sender">
+ <div class="omrs-input-group">
+				<label class="omrs-input-underlined">
+				  <input required id="number" value="+91" maxlength="13" type="tel">
+				  <span class="omrs-input-label">NUMBER</span>
+				</label>
+			</div>
+				<div id="recaptcha-container"></div>
+			<input type="button" id="send" value="Send" onClick="phoneAuth()" class="btn-hover color-2">
+		</div>
+		<div id="verifier" style="display: none">
+		    <p><b>OTP IS SENDED FROM  59029414.</b></p>
+		     <div class="omrs-input-group">
+				<label class="omrs-input-underlined">
+			<input type="tel" id="verificationcode" style="width:80px;" maxlength="6">
+			 <span class="omrs-input-label">OTP</span>
+			</label>
+				    </div>
+			<input type="button"id="verify" value="Verify" onClick="codeverify()" class="btn-hover color-2">
+			<div class="p-conf" style="display: none; background:green; border-radius:5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+  <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+</svg> Number Verified Next>></div>
+			<div class="n-conf" style="display: none; background:red;border-radius:5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+</svg> OTP ERROR</div>
+			</div>
+			</div>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GCFCN7G09K"></script>
+<script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script>
+<script src="phone.js"></script>
+</html>
